@@ -23,11 +23,20 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>r"] = { name = "Run" },
-    ["<leader>rr"] = { ":RustRun<cr>", desc = "Run rust" },
+    ["<leader>r"] = { name = "Run/REPL" },
+    ["<leader>rr"] = { ":RustRun<cr>", desc = "Run Rust" },
+    ["<leader>rs"] = { ":REPLStart<cr>", desc = "REPL Start" },
+    ["<leader>rc"] = { ":REPLClose<cr>", desc = "REPL Close" },
+    ["<leader>ru"] = { "/# %%<cr>N<S-v>n<leader>:<BS><BS><BS><BS><BS>REPLSendVisual<cr>n", desc = "REPL rUn cell" },
+    ["<S-cr>"] = { "/# %%<cr>N<S-v>n<leader>:<BS><BS><BS><BS><BS>REPLSendVisual<cr>n", desc = "REPL rUn cell" },
+
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  v = {
+    ["<leader>r"] = { ":<BS><BS><BS><BS><BS>REPLSendVisual<cr>", desc = "Repl Run visual" },
+  }
+
 }
