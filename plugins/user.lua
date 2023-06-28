@@ -11,6 +11,19 @@ return {
     },
 
     {
+        "ray-x/lsp_signature.nvim",
+        version = "*", -- Use for stability; omit to use `main` branch for the latest features
+        event = "VeryLazy",
+        config = function()
+            require("lsp_signature").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end,
+    },
+
+
+
+    {
         "milanglacier/yarepl.nvim",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
         event = "VeryLazy",
